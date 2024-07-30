@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMICS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        button, h1, h2 {
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" target="_parent" class="home-button"><img src="homenew.png" alt="Home"></a>
+        <img src="Srmseal.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <h1>ACADEMICS</h1>
+        <br>
+        <div class="buttons-container">
+            <button class="info-button" data-video="re-admission.mp4">Re Admission</button>
+            <button class="info-button" data-video="course-registration.mp4">Course Registration/Enrollment-Late</button>
+            <button class="info-button" data-video="exemptions.mp4">Exemptions / Regulations Deviation</button>
+            <button class="info-button" data-video="class-retest.mp4">Class Retest</button>
+            <button class="info-button" data-video="attendance-special-cases.mp4">Attendance - Special Cases</button>
+            <button class="info-button" data-video="change of branch.mp4">Change Of Branch / Campus</button>
+            <button class="info-button" data-video="Revoking or suspension.mp4">Revoking a Suspension / Termination</button>
+            <button class="info-button" data-video="TC.mp4">Request for Withdrawal / TC</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.info-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const videoSource = this.getAttribute('data-video');
+                window.location.href = `video.html?video=${videoSource}`;
+            });
+        });
+    </script>
+</body>
+</html>
