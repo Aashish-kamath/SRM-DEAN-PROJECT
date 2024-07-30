@@ -61,3 +61,21 @@ body {
     width: 200px; /* Increase the size of the logo */
     margin-bottom: 20px; /* Adjust margin for the logo */
 }
+
+.about-us {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #0e2181;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    animation: slideIn 1s ease-out;
+    color: #fff;
+}
+
+.about-us:hover {
+    background-color: #1834be;
+}
