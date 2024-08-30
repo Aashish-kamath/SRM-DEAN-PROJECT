@@ -14,11 +14,26 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             margin: 0;
         }
 
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+        }
+
+        .home-button img,
+        .logo {
+            max-height: 80px;
+        }
+
         h1 {
+            margin-top: 120px; /* Adjusted to prevent overlap with header */
             animation: slideDown 1s ease-out;
         }
 
@@ -67,8 +82,15 @@
         }
     </style>
 </head>
+
 <body>
+    <div class="header">
+        <a href="index.html" target="_parent" class="home-button"><img src="homenew.png" alt="Home"></a>
+        <img src="Srmseal.png" alt="Logo" class="logo">
+    </div>
+
     <h1>About Us</h1>
+
     <div class="photo-grid">
         <!-- Repeat this block for each photo -->
         <div class="photo-container">
