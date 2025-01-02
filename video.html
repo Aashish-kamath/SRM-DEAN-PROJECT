@@ -4,47 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIDEO</title>
-    <link rel="stylesheet" href="bigvid.css">
     <style>
-        /* Styling for buttons in header */
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for the body */
+        body {
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('srmgoat.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+        /* Header styling */
         .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+        /* Logo Styling */
+        .header img.logo {
+            max-height: 50px;
+        }
+
+        /* Home and Back Button Container */
+        .header-buttons {
             display: flex;
             align-items: center;
+            gap: 15px;
         }
 
-        .home-button img,
-        .back-button {
-            margin-right: 10px; /* Space between the buttons */
-        }
-
-        .back-button {
-            background-color: #0e2181;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
+        /* Home Button Styling */
+        .home-button img {
+            height: 40px;
             cursor: pointer;
         }
 
+        /* Back Button Styling */
+        .back-button {
+            background-color: #1834be;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
         .back-button:hover {
-            background-color: 1834be;
+            background-color: #0e2181;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Video Container Styling */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('srmgoat.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Video Player Styling */
+        #video-player {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #0e2181;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="index.html" target="_parent" class="home-button"><img src="homenew.png" alt="Home"></a>
-        <button onclick="goBack()" class="back-button">Back</button>
+        <div class="header-buttons">
+            <a href="index.html" class="home-button"><img src="homenew.png" alt="Home"></a>
+            <button onclick="goBack()" class="back-button">Back</button>
+        </div>
         <img src="Srmseal.png" alt="Logo" class="logo">
     </div>
+
     <div class="video-container">
         <video id="video-player" autoplay>
             <source id="video-source" src="" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
+    
 
     <script>
         // Function to get query parameter value by name
@@ -63,7 +138,7 @@
         }
 
         // Ensure the video doesn't replay after finishing
-        videoPlayer.addEventListener('ended', function() {
+        videoPlayer.addEventListener('ended', function () {
             videoPlayer.pause();
             videoPlayer.currentTime = 0; // Reset to the start of the video
         });
