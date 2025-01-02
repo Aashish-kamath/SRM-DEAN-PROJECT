@@ -37,6 +37,13 @@
             animation: slideDown 1s ease-out;
         }
 
+        .section-title {
+            margin-top: 40px;
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
         .photo-grid {
             display: flex;
             flex-wrap: wrap;
@@ -60,7 +67,7 @@
         .photo img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 10px;
         }
 
@@ -91,14 +98,21 @@
 
     <h1>About Us</h1>
 
+    <!-- Faculty Coordinator Section -->
+    <div class="section-title">Faculty Coordinator</div>
     <div class="photo-grid">
-        <!-- Repeat this block for each photo -->
         <div class="photo-container">
             <div class="photo">
                 <img src="Sasirekha.jpg" alt="Ms. Sasi Rekha Sankar">
             </div>
             <div class="photo-name">Ms. Sasi Rekha Sankar</div>
         </div>
+    </div>
+
+    <!-- Students Section -->
+    <div class="section-title">Students of CINTEL</div>
+    <div class="photo-grid">
+        <!-- Repeat this block for each student -->
         <div class="photo-container">
             <div class="photo">
                 <img src="Surya.jpg" alt="Surya KP">
@@ -143,34 +157,28 @@
         </div>
         <div class="photo-container">
             <div class="photo">
-                <img src="Tharun.jpg" alt="Person 8">
+                <img src="Tharun.jpg" alt="Tharun Haribabu">
             </div>
             <div class="photo-name">Tharun Haribabu</div>
         </div>
         <div class="photo-container">
             <div class="photo">
-                <img src="Aashish.jpg" alt="Person 9">
+                <img src="Aashish.jpg" alt="Aashish Kamath">
             </div>
             <div class="photo-name">Aashish Kamath</div>
         </div>
         <div class="photo-container">
             <div class="photo">
-                <img src="Vivish.jpg" alt="Person 10">
+                <img src="Vivish.jpg" alt="Vivish Adhik">
             </div>
             <div class="photo-name">Vivish Adhik</div>
         </div>
         <div class="photo-container">
             <div class="photo">
-                <img src="Akashrv.jpg" alt="Person 11">
+                <img src="Akashrv.jpg" alt="Akash RV">
             </div>
             <div class="photo-name">Akash RV</div>
         </div>
-        <div class="photo-container">
-            <div class="photo">
-                <img src="Raksha.jpg" alt="Person 12">
-            </div>
-            <div class="photo-name">Raksha Vihasini</div>
-        </div>
-    </div>
+        
 </body>
 </html>
